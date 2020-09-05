@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es6",
+		"checkJs": true,  /* Typecheck .js files. */
+		"lib": [
+			"es6"
+		]
+	},
+	"exclude": [
+		"node_modules"
+	],
+	"async axios function": {
+		"prefix": "_gascyncAxios",
+		"body": [
+			"async function ${1:funName()}{",
+			"  try {",
+			"    const response = await axios.get(\"${2:url}\");",
+			"    console.log(response);",
+			"  } catch (error) {",
+			"    console.error(error);",
+			"  }",
+			"}"
+		],
+		"description": "async axios function"
+	}
+}
