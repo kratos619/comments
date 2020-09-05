@@ -9,7 +9,6 @@ function activate(context) {
     const word = document.getText(selection);
 	let cursorPosition = editor.selection.start;
 	let range = new vscode.Position(cursorPosition.line , cursorPosition.character);
-	let selectedText ;
 		editor.edit((editBuilder) => {
 			editBuilder.insert(range, "/\/write yor comment here \n");
 		});
@@ -22,7 +21,6 @@ function activate(context) {
     const word = document.getText(selection);
 	let cursorPosition = editor.selection.start;
 	let range = new vscode.Position(cursorPosition.line, cursorPosition.character);
-	let selectedText ;
 		editor.edit((editBuilder) => {
 			editBuilder.insert(range,`/**\n \t* @param  {} url\n \t* @param  {} body\n \t**/\n`);
 		});
